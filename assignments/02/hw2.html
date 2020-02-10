@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/web-programming/">Home</a></li>
+      <li><a href="/web-programming/assignments/">Assignments</a></li>
+      <li><a href="/web-programming/blog/">Blog</a></li>
+    </ul>
+  </nav>
+
+  <h1>Shuffling Done Weird</h1>
+  <p>
+    This assignment focuses on providing alternative methods to shuffling a basic deck.
+    The first method was done similar to how I handled tournament seeding for an internship, whereas the 
+    second one goes for a more random (and a bit naive) way of shuffling a card. Both of these 
+    methods do shuffle the deck, so I am perfectly fine with the results. Both of these methods start by
+    generating a sorted deck of cards.
+  </p>
+  <h2>Method 1: Pushing into an array</h2>
+  <p>
+    For this method, I have decided to randomly grab a card from the sorted deck and insert it 
+    to the new deck. I used the splice method to remove an element from the original deck, and then 
+    inserted into the new deck until the original deck is empty.
+  </p>
+  <button id="genButt" onclick="ShuffleOne(generateDeck())">Method One</button>
+  <h2>Method 2: Randomly Swapping positions</h2>
+  <p>
+    Using one deck, I would go through each card and swap that card with a random card that isn't the 
+    card we intend to swap it with. I personally like this method more, as I am not using the splice method, 
+    and there's more flexibility to make expand the way this can be shuffled more efficiently (does not swap 
+    with positions it already has swapped with || can swap with itself || merge sort but make instead of sorting 
+    randomize each value).
+  </p>
+  <br/>
+  <button id="genButt" onclick="ShuffleTwo(generateDeck())">Shuffle Two</button>
+
+  <h3>Cards</h3>
+  <div id="displayer">
+    <p>Click on one of the buttons to show the shuffling</p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
