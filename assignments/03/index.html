@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/web-programming/">Home</a></li>
+      <li><a href="/web-programming/assignments/">Assignments</a></li>
+      <li><a href="/web-programming/blog/">Blog</a></li>
+    </ul>
+  </nav>
+
+  <h1>How Far Away From Hunter?</h1>
+  <p>
+    For this assignment, we needed to do an API call but give it a unique twist. I decided to take inspiration from <a href="http://istheapplebeesondelcoparkdrinthesuburbsofdaytonopenrightnow.com/">http://istheapplebeesondelcoparkdrinthesuburbsofdaytonopenrightnow.com/</a>
+    however I decided to give a twist. I wanted to experiment a little bit using the canvas API, in which I used in the past to create interactive games and projects. I used the Open Cage 
+    API to give me the latitude and longitude of Hunter College and the inputted address. With that, I calculated the distance between those two addresses, and rendered a square based on that. 
+    The smaller the square, the further away you are from it. The sqaure becomes bigger / smaller as you move the arrow keys, to make it look like you are travelling back and forth.
+  </p>
+
+  <canvas id="myCanvas" width="500px" height="500px"></canvas>
+  <script src="main.js"></script>
+</body>
+</html>
