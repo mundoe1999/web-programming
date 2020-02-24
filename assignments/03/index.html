@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/web-programming/">Home</a></li>
+      <li><a href="/web-programming/assignments/">Assignments</a></li>
+      <li><a href="/web-programming/blog/">Blog</a></li>
+    </ul>
+  </nav>
+
+  <h1>How Far Away From Hunter?</h1>
+  <div style="float: left;">
+    <p class="block-l">
+      For this assignment, we needed to do an API call but give it a unique twist. I decided to take inspiration from <a href="http://istheapplebeesondelcoparkdrinthesuburbsofdaytonopenrightnow.com/">http://istheapplebeesondelcoparkdrinthesuburbsofdaytonopenrightnow.com/</a>
+      however I decided to give a twist. I wanted to experiment a little bit using the canvas API, in which I used in the past to create interactive games and projects. I used the Open Cage 
+      API to give me the latitude and longitude of Hunter College and the inputted address. With that, I calculated the distance between those two addresses, and rendered a square based on that. 
+      The smaller the square, the further away you are from it. The sqaure becomes bigger / smaller as you move the arrow keys, to make it look like you are travelling back and forth.
+    </p>
+  
+    <p class="block-l">
+      I'm a bit unsatisfied with how the square is being rendered, I wanted it to be a bit more dynamic in it's shape
+      (as in, as you move from center to left, it gets thinner until you move it back to the center). However, that turned out 
+      a lot harder than I have initially anticipated (tried to set up an algorithm that would do the panning, but it backfired considerably). I have, though,
+      made it functional enough that when you type an address, the square changes somewhat in a relative position on how far away 
+      you are form that destination, which was my desired goal, albeit somewhat incomplete.
+    </p>
+
+  </div>
+
+
+    <canvas id="myCanvas" width="500px" height="500px" style="float: right;"></canvas>
+  <form  id="mainForm" style="clear: left; float: left;">
+    Address:  <input type="text" name="address"/>
+    Zipcode:  <input type="number" name="zip"  />
+    City:     <input type="text" name="city" />
+    State:    <input type="text" name="state"  />
+    <input type="submit" id="submit" onclick="start()">
+  </form>
+  <b style="float:right">CONTROLS: W A S D to MOVE</b>
+
+  <script src="main.js"></script>
+</body>
+</html>
