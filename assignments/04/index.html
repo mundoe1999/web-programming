@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/web-programming/">Home</a></li>
+      <li><a href="/web-programming/assignments/">Assignments</a></li>
+      <li><a href="/web-programming/blog/">Blog</a></li>
+    </ul>
+  </nav>
+
+  <h1>Packets of Vidya Gaemz</h1>
+  <div>
+
+    <p>
+      For this assignment, we needed to do use tools to investigate our own local 
+      internet system. What I did, was use the tool Wireshark in order to see what packets 
+      I am receiving while playing Final Fantasy 14. I am a fan of MMORPGS and I was wondering 
+      what protocol of information was being sent and the length of the packets themselves.
+   </p>
+   <h2>The Method</h2>
+   <p>
+     Over a course of a couple days, I decided to open Wireshark and record the packets 
+     being received while I played. I would play in the environment that I usually do, while 
+     being in a voicecall in discord, my internet browser open, and just had at it.
+   </p>
+   <p>
+      A question remains though, which is: <strong>How do you know which packets are your games?</strong>.
+      That's a good question. At first, I thought I had it down, but then realized I was looking the receiving 
+      destination instead of source. I used the Final Fantasy XIV data center service to obtain the IP address, 
+      and then preceded to look at my data. One thing that I realized is that I couldn't find it. The closest matching 
+      ip was off by the last address by 4. This led me to believe that the ip address may change due to changing servers?
+      But I cannot be completely sure about that. I also realized that the protocol that I received was TCP 
+      instead of UDP. I was always under the assumption that games would use UDP in order to handle desynchronization issues 
+      and allow the game to keep going, as the user might lag and you just want to send the packets through 
+      regardless (which is what I was taught back in 2013 when I was in an online fighting game community).
+      However, that was not the case. What I DID notice though, was that the one that was under UDP protocol was the 
+      voicecall, which made sense. (I obtained the IP of the Discord call before leaving the chat, as Discord has a 
+      tendency to change IP Address of where the call is hosted).
+   </p>
+   <h2>Things to look forward</h2>
+   <p>
+     One of the things that I want to do is create an average of the LENGTH of the packets distributed by IP Address vs amount of packets. 
+     This is to see how much data on average is being sent to my computer, and to see which services consume the most internet. 
+   </p>
+
+  </div>
+
+</body>
+</html>
