@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expensive Bugs</title>
+
+</head>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+  body{
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+  }
+  .main{
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    min-width: 100vh;
+    min-height: 100vh;
+    background-color: #20999f;
+  }
+  #main-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 80%;
+  }
+  #number-one{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    padding: 2em;
+
+    background-color: #fbfae5;
+  }
+  #lesser-bugs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin: 2em;
+    width: 100%;
+
+  }
+  .smaller-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    padding: 2em;
+    text-align: center;
+    background-color: #fbfae5;
+  }
+</style>
+<body>
+  <div class="main">
+    <div id="main-display">
+      <h1>Current Bugs</h1>
+      <div id="number-one"></div>
+      <div id="lesser-bugs"></div>
+      <div>
+        <h2>About this Project</h2>
+        This Web Application gets you the latest bug you can catch in Animal Crossing: New Horizons. That is all.
+      </div>
+    </div>
+  </div>
+  <script src="bug.js"></script>
+</body>
+</html>
