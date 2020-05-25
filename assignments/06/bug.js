@@ -1,5 +1,8 @@
+  let date = new Date();
+  let hour = date.getHours();
+  let month = date.getMonth();
 
-fetch('https://acnh-what-to-catch.herokuapp.com/', {
+fetch(`https://acnh-what-to-catch.herokuapp.com/?sort=true&hour=${hour}&month=${month}`, {
   headers: {
     "Access-Control-Allow-Origin": "*"
   }
@@ -8,43 +11,12 @@ fetch('https://acnh-what-to-catch.herokuapp.com/', {
   return res.json();
 })
 .then(data => {
-  let bugs = getBugsNow(data);
-  bugs.sort((a,b) => {
-    return b.price - a.price
-  })
-  renderBugs(bugs);
+  renderBugs(data);
 }) 
 
 
 
-// This function calculates which bugs are available at this given time
-function getBugsNow(dataset){
 
-  let date = new Date();
-  let hour = date.getHours();
-  let month = date.getMonth();
-
-  let res = [];
-
-  dataset.forEach(element => {
-    if(element["month"].includes(month)){
-      // Check if time matches
-      let start = element["start"];
-      let end = element["end"];
-      if(end < start){
-        if(hour >= start || hour <= end){
-          res.push(element);
-        }
-      } else {
-        if(hour >= start && hour <= end){
-          res.push(element);
-        }
-      }
-    }
-  });
-
-  return res;
-}
 
 function renderBugs(list){
   console.log(list);
